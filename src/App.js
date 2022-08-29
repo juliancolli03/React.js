@@ -1,11 +1,11 @@
 import React from 'react';
 import './index.css';
-
-import Nav from './componentes/Nav';
+import BodyConNav from './componentes/bodyconNav';
  function App() {
   return(
   <div>
-   <Nav />
+    
+   <BodyConNav/>
    
   </div>
   )
