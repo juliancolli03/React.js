@@ -1,39 +1,28 @@
 import React from "react";
-
+import Menus from "./menus";
 const nav = () => {
     return(
-        <div>
+        <div >
 
-<nav class="navbar navbar_style navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">JULIAN COLLI</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <ul class="navbar-nav"  >
-                  <li class="li">
-                  <a class="nav-link active" aria-current="page" href="#">INICIO</a>
-                  </li>
-                  <li class="li">
-                    <a class="nav-link active" aria-current="page" href="pages/sobremi.html">SOBRE MI</a>
-                  </li>
-                  <li class="li">
-                    <a class="nav-link active" aria-current="page" href="pages/hab.html">MIS HABILIDADES</a>
-                  </li>
-                  <li class="li">
-                    <a class="nav-link active" aria-current="page" href="pages/contratar.html">PORQUE CONTRATARME</a>
-                  </li>
-                  <li class="li">
-                    <a class="nav-link active" aria-current="page" href="pages/contactame.html">CONTACTAME</a>
-                  </li>
-                  </ul>
+<div className="container-fluid">
+        <div className="row flex-nowrap">
+            <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a className="botom d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span className="fs-3 d-none d-sm-inline">HouseTec</span>
+                    </a>
+                    <Menus/>
                 </div>
-              </div>
             </div>
-          </nav>  
-
+            <div className="col py-3">
+                <h3>HouseTec Argentina</h3>
+                <p className="lead"> Bienvenidos a HouseTec Argentina, la casa de tecnologia mas importante de toda Argentina. En este sitio web vas a poder encontrar nuestros productos a los mejores precios del mercado.
+                </p><ul className="list-unstyled">
+                    <li><h5>Responsive</h5> shrinks in width, hides text labels and collapses to icons only on mobile</li>
+                </ul>
+            </div>
+        </div>
+    </div>
         </div>
     )
 }
