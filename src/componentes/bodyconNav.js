@@ -4,6 +4,7 @@ import Xiaomi from "../imagenes/xiaomi.jpg"
 import Iphone from "../imagenes/iphone.jpg"
 import Ps5 from "../imagenes/ps5.jpg"
 import Samsung from "../imagenes/Samsung.jpg"
+import TituloTarjeta from "./tarjetas"
 const tituloDelNav = ["HouseTec"]
 const bodyConNav = () => {
     return(
@@ -24,7 +25,7 @@ const bodyConNav = () => {
                 <p className="lead"> Bienvenidos a HouseTec Argentina, la casa de tecnologia mas importante de toda Argentina. En este sitio web vas a poder encontrar nuestros productos a los mejores precios del mercado.
                 </p>
             <h3> Nuestros Productos</h3>
-            
+            <TituloTarjeta imagen = {Samsung}/>
             </div>
         </div>
         </div>
