@@ -8,7 +8,17 @@ width: auto;
 
 .nav{
   margin: 15px;
+  padding-top: 100px;
+  position: fixed;
 }
+.shadow{
+  width: 250px;
+padding: 6px;
+margin: 30px;
+}
+ .navegacion{
+  display: flex;
+} 
 .nav-link{
   font-size: 20px;
   padding: 20px;
@@ -22,7 +32,13 @@ width: auto;
 .botom {
   border-bottom: white 2px solid;
   padding: 25px;
+  position: fixed;
 }
+.botones{
+  margin: 7px;
+  padding: 8px; 
+}
+
 @media (max-width:500px){
   .botom{
       border-bottom: none;
