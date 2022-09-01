@@ -34,13 +34,17 @@ margin: 30px;
   padding: 25px;
   position: fixed;
 }
-.botones{
-  margin: 7px;
-  padding: 8px; 
+.Items{
+  display: flex;
 }
-
+.card-img-top{
+  height: 250px;
+}
 @media (max-width:500px){
   .botom{
       border-bottom: none;
+  }
+  .bg-dark{
+    width: 15%;
   }
 }
