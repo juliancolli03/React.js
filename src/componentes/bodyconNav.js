@@ -5,6 +5,8 @@ import Iphone from "../imagenes/iphone.jpg"
 import Ps5 from "../imagenes/ps5.jpg"
 import Samsung from "../imagenes/Samsung.jpg"
 import TituloTarjeta from "./tarjetas"
+import Itemconunt from "./Itemcount"
+
 
 
 const tituloDelNav = ["HouseTec"]
@@ -28,7 +30,9 @@ const bodyConNav = () => {
                 </p>
             <h3> Nuestros Productos</h3>
             <div className="Items">
-            <TituloTarjeta imagen = {Samsung} titulo = {"Samsung S12 +"} descripcion={"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial."}/>
+            
+            <TituloTarjeta  imagen = {Samsung} titulo = {"Samsung S12 +"} descripcion={"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial."} 
+           />               
             <TituloTarjeta imagen = {Ps5} titulo ={"Play 5"} descripcion={"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego."}/>
             </div>
             </div>
