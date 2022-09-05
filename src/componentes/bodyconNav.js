@@ -9,8 +9,10 @@ import Itemconunt from "./Itemcount"
 
 
 
+
 const tituloDelNav = ["HouseTec"]
 const bodyConNav = () => {
+    
     return(
         <div >
          
@@ -35,6 +37,7 @@ const bodyConNav = () => {
            />               
             <TituloTarjeta imagen = {Ps5} titulo ={"Play 5"} descripcion={"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego."}/>
             </div>
+
             </div>
         </div>
         </div>

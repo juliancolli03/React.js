@@ -3,9 +3,10 @@ import Itemconunt from "./Itemcount"
 import ItemCount2 from "./itemcount2";
 
 const tarjeta = (props) =>{
-    const onAdd= (cantidad) =>{
-        <h1>Compraste ${cantidad}</h1>
-    }
+    
+      const onAdd = (e) => {
+          console.log(` Productos seleccionados ${e}`)
+      }
     return(
     <div className="navegacion">
   <div class="col-12 col-md-6">
@@ -17,7 +18,7 @@ const tarjeta = (props) =>{
               {/* <a href="#" class="btn btn-primary btn-sm">Agregar al carrito</a> */}
               {/* <Itemconunt2 inicial={1} stock={1} onAdd={onAdd}/> */}
 
-              <ItemCount2 initial={1} stock={9} onAdd={onAdd} />
+              <ItemCount2 initial={1} stock={2} onAdd={onAdd} />
           </div>
       </div>
   </div>
