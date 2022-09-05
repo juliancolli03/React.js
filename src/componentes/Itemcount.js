@@ -1,19 +1,19 @@
 import React from "react"
 import { useState } from "react"
 
-const BotonContando = (inicial,stock,onAdd) =>{
-  const [botonContar, botonContara] = useState(1)
+const BotonContando = ({inicial,stock,onAdd}) =>{
+  const [botonContar, botonContara] = useState(inicial)
   
   if(botonContar==0){
      botonContara(botonContar+1)
    }
   return(
     <div className="botones">
-    <a onClick={()=>onAdd(botonContar)} href="#" class="btn btn-primary btn-sm">Agregar al carrito</a>
+    <a disabled={stock <= 0} onClick={()=>onAdd(botonContar)} href="#" class="btn btn-primary btn-sm">Agregar al carrito</a>
 <p>{botonContar}</p>
 <button  className="btn" onClick={() => {
 botonContara (botonContar +1)
-if(botonContara === stock){
+if(botonContara = 3){
   alert("s")
 }
 }}> <i className="fa-solid fa-plus"></i></button>
