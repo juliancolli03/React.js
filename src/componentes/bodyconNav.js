@@ -1,18 +1,37 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Menus from "./menus";
 import Xiaomi from "../imagenes/xiaomi.jpg"
 import Iphone from "../imagenes/iphone.jpg"
 import Ps5 from "../imagenes/ps5.jpg"
 import Samsung from "../imagenes/Samsung.jpg"
-import TituloTarjeta from "./tarjetas"
-import Itemconunt from "./Itemcount"
+import ItemCounts from "./item"
+// import TituloTarjeta from "./tarjetas"
+// import { useEffect } from "react";
 
 
-
+const productos = [
+    {
+    id:1, titulo:"Samsung S12 +", descripcion:"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial.", foto: {Samsung}, precio:5000
+},{
+    id:2, titulo:"PS5", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: {Ps5}, precio:4000
+},{
+    id:3, titulo:"Iphone 12", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: {Iphone}, precio:8800 
+},{
+    id:4, titulo:"Xiaomi MIX", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: {Xiaomi}, precio:4000
+}]
 
 const tituloDelNav = ["HouseTec"]
-const bodyConNav = () => {
-    
+const BodyConNav = () => {
+    const [data, setData]=useState([])
+
+    useEffect(()=>{
+        const getData= new Promise((resolve) => {
+            setTimeout(()=>{
+                resolve(productos)
+            },3000)
+        })
+        getData.then(res=>setData(res))
+    },[])
     return(
         <div >
          
@@ -33,9 +52,10 @@ const bodyConNav = () => {
             <h3> Nuestros Productos</h3>
             <div className="Items">
             
-            <TituloTarjeta  imagen = {Samsung} titulo = {"Samsung S12 +"} descripcion={"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial."} 
-           />               
-            <TituloTarjeta imagen = {Ps5} titulo ={"Play 5"} descripcion={"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego."}/>
+            {/* <TituloTarjeta  imagen = {Samsung} titulo = {"Samsung S12 +"} descripcion={"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial."} 
+           />                */}
+            {/* <TituloTarjeta imagen = {Ps5} titulo ={"Play 5"} descripcion={"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego."}/> */}
+            <ItemCounts data={data}/>
             </div>
 
             </div>
@@ -49,4 +69,4 @@ const bodyConNav = () => {
 
 
 
-export default bodyConNav
+export default BodyConNav
