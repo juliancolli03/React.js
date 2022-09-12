@@ -1,7 +1,7 @@
 import React,{ useState } from "react";
 
-const ItemCount = ({initial, stock, onAdd}) =>{
-    const [count, setCount] = useState(initial)
+const ItemCount = ({ stock, onAdd}) =>{
+    const [count, setCount] = useState(1)
     const decrease = () =>{
         setCount(count-1)
     }

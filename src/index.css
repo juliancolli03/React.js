@@ -35,7 +35,8 @@ margin: 30px;
   position: fixed;
 }
 .Items{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .card-img-top{
   height: 250px;
@@ -46,5 +47,8 @@ margin: 30px;
   }
   .bg-dark{
     width: 15%;
+  }
+  .Items{
+    grid-template-columns:none
   }
 }

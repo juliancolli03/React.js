@@ -11,17 +11,17 @@ import ItemCounts from "./item"
 
 const productos = [
     {
-    id:1, titulo:"Samsung S12 +", descripcion:"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial.", foto: {Samsung}, precio:5000
+    id:1, titulo:"Samsung S12 +", descripcion:"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial.", foto: "../imagenes/Samsung.jpg", precio:5000, stock:99
 },{
-    id:2, titulo:"PS5", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: {Ps5}, precio:4000
+    id:2, titulo:"PS5", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: {Ps5}, precio:4000, stock:22
 },{
-    id:3, titulo:"Iphone 12", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: {Iphone}, precio:8800 
+    id:3, titulo:"Iphone 12", descripcion:"El nuevo Iphone llego al mercado para cumplir records! Con una camara de una gran resolucion, y un sistema operativo intuitivo es un celular muy versatil.", foto: {Iphone}, precio:8800, stock:4
 },{
-    id:4, titulo:"Xiaomi MIX", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: {Xiaomi}, precio:4000
+    id:4, titulo:"Xiaomi MIX", descripcion:"Los smartphones Asiaticos estan revolucionando el mercado! Este nuevo smartphone es de los mejores teniendo en cuenta su calidad por su precio. ", foto: {Xiaomi}, precio:4000, stock:10
 }]
 
-const tituloDelNav = ["HouseTec"]
-const BodyConNav = () => {
+// const tituloDelNav = ["HouseTec"]
+const Bodyy = () => {
     const [data, setData]=useState([])
 
     useEffect(()=>{
@@ -33,18 +33,8 @@ const BodyConNav = () => {
         getData.then(res=>setData(res))
     },[])
     return(
-        <div >
-         
-         <div className="container-fluid">
-        <div className="row flex-nowrap">
-            <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                    <a className="botom d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <span className="fs-3 d-none d-sm-inline">{tituloDelNav.map(i => (i))}</span>
-                    </a>
-                    <Menus/>
-                </div>
-            </div>
+
+            
             <div className="col py-3">
                 <h3>HouseTec Argentina</h3>
                 <p className="lead"> Bienvenidos a HouseTec Argentina, la casa de tecnologia mas importante de toda Argentina. En este sitio web vas a poder encontrar nuestros productos a los mejores precios del mercado.
@@ -58,10 +48,9 @@ const BodyConNav = () => {
             <ItemCounts data={data}/>
             </div>
 
-            </div>
-        </div>
-        </div>
-        </div>
+           </div> 
+          
+        
     
     )
 }
@@ -69,4 +58,4 @@ const BodyConNav = () => {
 
 
 
-export default BodyConNav
+export default Bodyy
