@@ -5,6 +5,7 @@ import Iphone from "../imagenes/iphone.jpg"
 import Ps5 from "../imagenes/ps5.jpg"
 import Samsung from "../imagenes/Samsung.jpg"
 import ItemCounts from "./item"
+import Productos from "./productos"
 // import TituloTarjeta from "./tarjetas"
 // import { useEffect } from "react";
 

@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './componentes/nav';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css';
+import ItemDetailContainer from './componentes/itemdetailconteiner';
 import BodyConNav from './componentes/bodyconNav';
  function App() {
   return(
@@ -13,7 +14,7 @@ import BodyConNav from './componentes/bodyconNav';
 
 <NavBar/>
    <BodyConNav/>
-  
+  <ItemDetailContainer/>
   </div>
   </div>
   </div>
