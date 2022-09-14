@@ -1,14 +1,16 @@
 import React from 'react';
+import {Routes, Route} from "react-router-dom"
+
 import NavBar from './componentes/nav';
 import './index.css';
 import ItemDetailContainer from './componentes/itemdetailconteiner';
 import BodyConNav from './componentes/bodyconNav';
-import {Routes, Route} from "react-router-dom"
 
 
 
  function App() {
   return(
+    <>
   <div>
 
 <div className="container-fluid">
@@ -16,12 +18,14 @@ import {Routes, Route} from "react-router-dom"
 
 
 <NavBar/>
-   <BodyConNav/>
-  <ItemDetailContainer/>
+<Routes>
+  <Route path='/principal' element={<BodyConNav/>} /> 
+  <Route path="/principal/:id" element={<ItemDetailContainer/>} />
+  </Routes>
   </div>
   </div>
   </div>
-
+  </>
   )
  }
 
