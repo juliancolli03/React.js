@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const listas = (props) =>{
     return(
 <li className="nav-item">
-                            <a href="#" className="nav-link align-middle px-0">
+                            <Link to={``} className="nav-link align-middle px-0">
                                 <i className={props.icono}></i> <span className="ms-1 d-none d-sm-inline">{props.tipo}</span>
-                            </a>
+                            </Link>
                         </li>
     )
 }

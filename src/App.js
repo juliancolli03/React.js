@@ -19,8 +19,8 @@ import BodyConNav from './componentes/bodyconNav';
 
 <NavBar/>
 <Routes>
-  <Route path='/principal' element={<BodyConNav/>} /> 
-  <Route path="/principal/:id" element={<ItemDetailContainer/>} />
+  <Route path='/body' element={<BodyConNav/>} /> 
+  <Route path="/:id" element={<ItemDetailContainer/>} />
   </Routes>
   </div>
   </div>
