@@ -4,7 +4,8 @@ body {
 
 width: auto;
 }
-
+.nav-pills .nav-link.active{
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity)) !important}
 .nav{
   margin: 15px;
   padding-top: 100px;

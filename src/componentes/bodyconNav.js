@@ -1,11 +1,7 @@
 import React, {useState, useEffect} from "react";
-import Menus from "./menus";
-import Xiaomi from "../imagenes/xiaomi.jpg"
-import Iphone from "../imagenes/iphone.jpg"
-import Ps5 from "../imagenes/ps5.jpg"
-import Samsung from "../imagenes/Samsung.jpg"
 import ItemCounts from "./item"
 import Productos from "./productos"
+import { useParams } from "react-router-dom";
 // import TituloTarjeta from "./tarjetas"
 // import { useEffect } from "react";
 
@@ -25,14 +21,23 @@ import Productos from "./productos"
 const Bodyy = () => {
     const [data, setData]=useState([])
 
+const {categoriaid} = useParams()
+
     useEffect(()=>{
         const getData= new Promise((resolve) => {
             setTimeout(()=>{
                 resolve(Productos)
-            },3000)
+            },1000)
         })
-        getData.then(res=>setData(res))
-    },[])
+        if(categoriaid){
+            getData.then(res=>res.filter(e=>e.categoria===categoriaid))
+
+        }
+        else{
+            getData.then(res=>setData(res))
+            
+        }
+    },[categoriaid])
     return(
 
             
