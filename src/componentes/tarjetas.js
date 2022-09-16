@@ -2,6 +2,7 @@ import React from "react";
 import ItemCount2 from "./itemcount2";
 
 const tarjeta = ({info}) =>{
+
     
       const onAdd = (e) => {
           console.log(` Productos seleccionados ${e}`)
@@ -16,7 +17,7 @@ const tarjeta = ({info}) =>{
               <p class="card-text">{info.descripcion}</p>
               <p class="card-text">$ {info.precio}</p>
              
-              <ItemCount2 stock={info.stock} onAdd={onAdd} />
+              <ItemCount2 stock={info.stock} href={`/productos/details/${info.id}`} onAdd={onAdd} />
           </div>
       </div>
   </div>

@@ -21,7 +21,7 @@ import { useParams } from "react-router-dom";
 const Bodyy = () => {
     const [data, setData]=useState([])
 
-const {categoriaid} = useParams()
+const {categoriaId} = useParams()
 
     useEffect(()=>{
         const getData= new Promise((resolve) => {
@@ -29,15 +29,17 @@ const {categoriaid} = useParams()
                 resolve(Productos)
             },1000)
         })
-        if(categoriaid){
-            getData.then(res=>res.filter(e=>e.categoria===categoriaid))
+        if(categoriaId){
+            getData.then(res=> setData(res.filter(e=>e.categoria===categoriaId)))
+
+            console.log(data)
 
         }
         else{
             getData.then(res=>setData(res))
             
         }
-    },[categoriaid])
+    },[categoriaId])
     return(
 
             

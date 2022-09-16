@@ -19,10 +19,12 @@ import BodyConNav from './componentes/bodyconNav';
 <Routes>
 <Route path='/' element={<BodyConNav/> }/>
 <Route path='/productos' element={<BodyConNav/> }/>
-<Route path='/productos/:categoriaid' element={<BodyConNav/> }/>
-<Route path='/id/:' element={  <ItemDetailContainer/> }/>
+<Route path='/productos/:categoriaId' element={<BodyConNav/> }/>
+<Route path='/productos/details/:id' element={  <ItemDetailContainer/> }/>
 
 </Routes>
+
+
   </div>
   </div>
   </div>
