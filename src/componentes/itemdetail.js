@@ -1,9 +1,11 @@
 
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ item }) => {
     return (
+        <Link to={"/details/${item.id}"} >
         <div className="detail">
             <img src={item.foto} />
             <div className="infoDetail">
@@ -15,6 +17,7 @@ const ItemDetail = ({ item }) => {
 
             </div>
         </div>
+        </Link>
     );
 };
 
