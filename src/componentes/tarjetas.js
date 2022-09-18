@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ItemCount2 from "./itemcount2";
 const tarjeta = ({info}) =>{
 
@@ -15,7 +16,8 @@ const tarjeta = ({info}) =>{
               <h3 class="h5 card-title mt-3">{info.titulo}</h3>
               <p class="card-text">{info.descripcion}</p>
               <p class="card-text">$ {info.precio}</p>
-              <ItemCount2 stock={info.stock} href={`/productos/details/${info.id}`} onAdd={onAdd}  />
+              <Link to={`/detalle/${info.id}`} className="btn "> Ver mas</Link>
+                            <ItemCount2 stock={info.stock}  onAdd={onAdd}  />
           </div>
       </div>
   </div>

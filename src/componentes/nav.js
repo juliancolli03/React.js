@@ -30,7 +30,7 @@ const NavBar = () =>{
                 </li>
                 <li className="nav-item">
                     <NavLink to={'/productos/celular'} className="nav-link align-middle px-0">
-                        <i className="fa-solid fa-cart-arrow-down"></i> <span className="ms-1 d-none d-sm-inline">Celulares</span>
+                    <i class="fa-solid fa-mobile-retro"></i> <span className="ms-1 d-none d-sm-inline">Celulares</span>
                     </NavLink>
                 </li>
                 <li className="nav-item">

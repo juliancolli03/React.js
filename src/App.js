@@ -20,7 +20,7 @@ import BodyConNav from './componentes/bodyconNav';
 <Route path='/' element={<BodyConNav/> }/>
 <Route path='/productos' element={<BodyConNav/> }/>
 <Route path='/productos/:categoriaId' element={<BodyConNav/> }/>
-<Route path='/productos/details/:id' element={  <ItemDetailContainer/> }/>
+<Route path='/detalle/:id' element={  <ItemDetailContainer/> }/>
 
 </Routes>
 
