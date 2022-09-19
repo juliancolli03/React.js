@@ -20,9 +20,9 @@ const ItemDetailContainer = () => {
             .then((info) => {
                 setItem(info.find(e => e.id === parseInt(id)));
             })
-            .catch((error) => {
-                console.log(error);
-            });
+            // .catch((error) => {
+            //     console.log(error);
+            // });
     }, [])
     return (
         <div>
