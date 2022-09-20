@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useContext}from "react";
 import { Link } from "react-router-dom";
+// import { UseartContext } from "../CartContext";
 // import ItemCount2 from "./itemcount2";
-const tarjeta = ({info}) =>{
+const Tarjeta = ({info}) =>{
 
+    // const nombre= useContext(UseartContext)
+    // console.log("Item :", nombre)
     
     //   const onAdd = (e) => {
     //       console.log(` Productos seleccionados ${e}`)
@@ -24,4 +27,4 @@ const tarjeta = ({info}) =>{
 </div>
 )}
 
-export default tarjeta
+export default Tarjeta

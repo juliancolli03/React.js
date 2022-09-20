@@ -4,8 +4,11 @@ import NavBar from './componentes/nav';
 import './index.css';
 import ItemDetailContainer from './componentes/itemdetailconteiner';
 import BodyConNav from './componentes/bodyconNav';
+import CartProvider from './CartContext';
 
 
+export const CartContext = React.createContext("")
+console.log("CartContext",CartContext)
 
  function App() {
   return(
@@ -15,6 +18,7 @@ import BodyConNav from './componentes/bodyconNav';
 <div className="container-fluid">
 <div className="row flex-nowrap">
 
+<CartProvider>
 <NavBar/>
 <Routes>
 <Route path='/' element={<BodyConNav/> }/>
@@ -23,7 +27,7 @@ import BodyConNav from './componentes/bodyconNav';
 <Route path='/detalle/:id' element={  <ItemDetailContainer/> }/>
 
 </Routes>
-
+</CartProvider>
 
   </div>
   </div>

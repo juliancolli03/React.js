@@ -8,7 +8,8 @@ const ItemList = ({data =[]}) =>{
 
 
     return(
-        data.map(productos => <Tarjetass key={productos.id} info={productos}/>)
+        data.map(productos => <Tarjetass key={productos.id} info={productos}/> )
+        
     )
 }
 

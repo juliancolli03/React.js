@@ -35,7 +35,7 @@ const NavBar = () =>{
                 </li>
                 <li className="nav-item">
                     <NavLink to={'/productos/play'} className="nav-link align-middle px-0">
-                        <i className="fa-solid fa-cart-arrow-down"></i> <span className="ms-1 d-none d-sm-inline">Otros</span>
+                    <i class="fa-solid fa-thin fa-tv"></i><span className="ms-1 d-none d-sm-inline">Otros</span>
                     </NavLink>
                 </li>
                 {/* <li className="nav-item">
