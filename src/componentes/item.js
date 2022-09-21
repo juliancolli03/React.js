@@ -1,5 +1,5 @@
 import React from "react";
-import Tarjetass from "./tarjetas"
+import Tarjetass from "./itemlist"
 import ItemDetailContainer from "./itemdetailconteiner";
 
 

@@ -18,7 +18,7 @@ import { useParams } from "react-router-dom";
 // }]
 
 // const tituloDelNav = ["HouseTec"]
-const Bodyy = () => {
+const Bodyy = ({texto}) => {
     const [data, setData]=useState([])
 
 const {categoriaId} = useParams()
@@ -53,6 +53,7 @@ const {categoriaId} = useParams()
             {/* <TituloTarjeta  imagen = {Samsung} titulo = {"Samsung S12 +"} descripcion={"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial."} 
            />                */}
             {/* <TituloTarjeta imagen = {Ps5} titulo ={"Play 5"} descripcion={"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego."}/> */}
+            {texto}
             <ItemCounts data={data}/>
             </div>
 
