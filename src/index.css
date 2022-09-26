@@ -11,6 +11,9 @@ width: auto;
   padding-top: 100px;
   position: fixed;
 }
+footer{
+  border-top: gray 1px solid;
+}
 .shadow{
   width: 250px;
 padding: 6px;

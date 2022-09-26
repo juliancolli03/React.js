@@ -6,7 +6,7 @@ import ItemDetailContainer from './componentes/itemdetailconteiner';
 import BodyConNav from './componentes/bodyconNav';
 import Cart from './componentes/cart';
 import CartProvider from './CartContext';
-import Footer from './componentes/footer';
+ import Footer from './componentes/footer';
 export const CartContext = React.createContext("")
 console.log("CartContext",CartContext)
 
@@ -30,11 +30,16 @@ console.log("CartContext",CartContext)
 
 </Routes>
 </CartProvider>
+{/* <Footer/> */}
 
   </div>
+  {/* <Footer/> */}
+
   </div>
+  {/* <Footer/> */}
+
   </div>
-  <Footer/>
+  {/* <Footer/> */}
   </>
   )
  }
