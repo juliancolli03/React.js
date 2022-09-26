@@ -6,8 +6,7 @@ import ItemDetailContainer from './componentes/itemdetailconteiner';
 import BodyConNav from './componentes/bodyconNav';
 import Cart from './componentes/cart';
 import CartProvider from './CartContext';
-
-
+import Footer from './componentes/footer';
 export const CartContext = React.createContext("")
 console.log("CartContext",CartContext)
 
@@ -21,12 +20,13 @@ console.log("CartContext",CartContext)
 
 <CartProvider>
 <NavBar/>
+
 <Routes>
 <Route path='/' element={<BodyConNav/> }/>
 <Route path='/productos' element={<BodyConNav/> }/>
 <Route path='/productos/:categoriaId' element={<BodyConNav/> }/>
 <Route path='/detalle/:id' element={  <ItemDetailContainer/> }/>
-{/* <Route path= "/cart" element= {<Cart/>} /> */}
+<Route path= "/cart" element= {<Cart/>} />
 
 </Routes>
 </CartProvider>
@@ -34,6 +34,7 @@ console.log("CartContext",CartContext)
   </div>
   </div>
   </div>
+  <Footer/>
   </>
   )
  }
