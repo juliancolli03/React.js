@@ -2,7 +2,7 @@ import React from "react";
 
 const productos = [
     {
-    id:1, titulo:"Samsung S12 +", descripcion:"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial.", foto: "../imagenes/Samsung.jpg", precio:5000, stock:99,categoria:"celular"
+    id:1, titulo:"Samsung S12 +", descripcion:"El S12 + es el smartphone mas poderoso de la gama alta de samsung. Cuenta con una gran camara frontal y trasera. Tambien tiene un procesador genial.", foto: "../imagenes/Samsung.jpg", precio: 5000,stock:99,categoria:"celular"
 },{
     id:2, titulo:"PS5", descripcion:"La nueva generacion de la consola mas popular llego a HouseTec. Cuenta con un gran procesador que te puede correr cualquier tipo de juego.", foto: "../imagenes/ps5.jpg", precio:4000, stock:22,categoria:"play"
 },{

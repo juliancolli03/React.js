@@ -24,7 +24,7 @@ const NavBar = () =>{
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                    <NavLink to="" className="nav-link align-middle px-0">
+                    <NavLink to={"/"} className="nav-link align-middle px-0">
                         <i className="fa-solid fa-cart-arrow-down"></i> <span className="ms-1 d-none d-sm-inline">Carrito</span>
                     </NavLink>
                 </li>
