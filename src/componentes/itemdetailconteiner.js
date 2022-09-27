@@ -14,23 +14,7 @@ const ItemDetailContainer = () => {
         const querydb = getFirestore();
         const queryDoc = doc(querydb,"productos",id)
         getDoc(queryDoc)
-        .then(res => setItem({id: res.id, ...res.item()}))
-
-    
-
-        // const getProduct = () =>
-        //     new Promise((res, rej) => {
-        //         const product = Productos.find((prod) => prod.id === parseInt(id));
-        //         setTimeout(() => {
-        //             res(Productos);
-        //         }, 3000);
-        //     });
-
-        // getProduct()
-        //     .then((info) => {
-        //         setItem(info.find(e => e.id === parseInt(id)));
-        //     })
-            
+        .then(res => setItem({id: res.id, ...res.data()}))         
     }, [id])
 
 
