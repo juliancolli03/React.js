@@ -19,7 +19,7 @@ const ItemDetail = ({ item }) => {
     const {addProduct} = useCartContext()
 
     return (
-        <div className="detail">
+        <div className="detail card">
             <img src={item.foto} className="card-img-top rounded-top" />
             <div className="infoDetail">
                 <h2>{item.titulo}</h2>
@@ -29,8 +29,8 @@ const ItemDetail = ({ item }) => {
                 <h3>${item.precio}</h3>
                 {goToCart ?
                 <div> 
-                    <Link className='text-white' to='/cart'>Terminar compra</Link><br />
-                  <Link className='text-white' to='/'>Seguir comprando</Link>
+                    <Link className='' to='/cart'>Terminar compra</Link><br />
+                  <Link className='' to='/'>Seguir comprando</Link>
                 </div>                :<ItemCount2 stock={item.stock}  onAdd={onAdd}  />
                 // <Link to="/cart"> terminar</Link>
            

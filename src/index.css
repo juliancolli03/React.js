@@ -4,6 +4,15 @@ body {
 
 width: auto;
 }
+.responsive{
+  width: auto;
+}
+footer{
+  background: #f9f9f9
+}
+.margen{
+  border-top: gray 1px solid;
+}
 .nav-pills .nav-link.active{
   background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity)) !important}
 .nav{
@@ -11,8 +20,11 @@ width: auto;
   padding-top: 100px;
   position: fixed;
 }
-footer{
-  border-top: gray 1px solid;
+.detail{
+  width: 250px;
+}
+.spann{
+  color: red;
 }
 .shadow{
   width: 250px;
@@ -54,5 +66,8 @@ margin: 30px;
   }
   .Items{
     grid-template-columns:none
+  }
+  footer{
+    width: 288px;
   }
 }

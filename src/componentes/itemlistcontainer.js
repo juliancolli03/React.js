@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import ItemCounts from "./item"
 import Productos from "./productos"
 import { useParams } from "react-router-dom";
+import { getFirestore, collection, getDocs, getDoc, query, where } from 'firebase/firestore';
+
 // import TituloTarjeta from "./tarjetas"
 // import { useEffect } from "react";
 
@@ -24,20 +26,25 @@ const Bodyy = ({texto}) => {
 const {categoriaId} = useParams()
 
     useEffect(()=>{
-        const getData= new Promise((resolve) => {
-            setTimeout(()=>{
-                resolve(Productos)
-            },1000)
-        })
+        // const getData= new Promise((resolve) => {
+        //     setTimeout(()=>{
+        //         resolve(Productos)
+        //     },1000)
+        // })
+        const querydb = getFirestore()
+        const queryCollection = collection(querydb,"productos")
         if(categoriaId){
-            getData.then(res=> setData(res.filter(e=>e.categoria===categoriaId)))
+        const queryFilter = query(queryCollection,where("categoria", "==",categoriaId))
+         getDocs(queryFilter)
+        // .then(res=>setData(res.docs.map(producto=>({id: producto.id, ...producto.data()}))))
+        .then(res=>setData(res.docs.map(producto=>({id: producto.id, ...producto.data()}))))
 
-            console.log(data)
 
-        }
-        else{
-            getData.then(res=>setData(res))
-            
+         }
+         else{
+          getDocs(queryCollection)
+          .then(res=>setData(res.docs.map(producto=>({id: producto.id, ...producto.data()}))))
+              
         }
     },[categoriaId])
     return(
@@ -56,53 +63,53 @@ const {categoriaId} = useParams()
             {texto}
             <ItemCounts data={data}/>
             </div>
-            <footer class="text-center text-white" >
-  <div class="container pt-4">
-    <section class="mb-4">
+            <br></br>
+            <div className="margen"> </div>
+            <br></br>
+            <footer className="shadow-lg text-center text-white" >
+  <div className="container pt-4">
+    <section className="mb-4">
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        className="btn btn-link btn-floating btn-lg text-dark m-1"
         href="https://wa.me/5491169253825"
         role="button"
         data-mdb-ripple-color="dark"
-        ><i class="fa-brands fa-whatsapp"></i
+        ><i className="fa-brands fa-whatsapp"></i
       ></a>
 
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        className="btn btn-link btn-floating btn-lg text-dark m-1"
         href="https://www.instagram.com/juliann_colli03/?hl=es"
         role="button"
         data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
+        ><i className="fab fa-instagram"></i
       ></a>
 
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        className="btn btn-link btn-floating btn-lg text-dark m-1"
         href="https://www.linkedin.com/in/julian-colli-05395a231/"
         role="button"
         data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
+        ><i className="fab fa-linkedin"></i
       ></a>
       <a
-        class="btn btn-link btn-floating btn-lg text-dark m-1"
+        className="btn btn-link btn-floating btn-lg text-dark m-1"
         href="https://github.com/juliancolli03"
         role="button"
         data-mdb-ripple-color="dark"
-        ><i class="fab fa-github"></i
+        ><i className="fab fa-github"></i
       ></a>
     </section>
   </div>
 
-  <div class="text-center text-dark p-3" >
-    © 2022 Copyright:
-     Julian Colli
-  </div>
+  <div className="text-center text-dark p-3" >
+    <p>
+  <span className="spann"> © </span> 2022 Diseño echo por <span className="spann"> Julian Colli </span>, todos los derechos reservados.
+  </p> </div>
 </footer>
 
-           </div> 
-          
-        
-    
-    )
+          </div> 
+          )
 }
 
 

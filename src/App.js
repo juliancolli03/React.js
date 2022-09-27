@@ -3,11 +3,11 @@ import {Routes, Route} from "react-router-dom"
 import NavBar from './componentes/nav';
 import './index.css';
 import ItemDetailContainer from './componentes/itemdetailconteiner';
-import BodyConNav from './componentes/bodyconNav';
+import BodyConNav from './componentes/itemlistcontainer';
 import Cart from './componentes/cart';
 import CartProvider from './CartContext';
  import Footer from './componentes/footer';
-export const CartContext = React.createContext("")
+ export const CartContext = React.createContext("")
 console.log("CartContext",CartContext)
 
  function App() {
@@ -19,9 +19,11 @@ console.log("CartContext",CartContext)
 <div className="row flex-nowrap">
 
 <CartProvider>
+
 <NavBar/>
 
 <Routes>
+  
 <Route path='/' element={<BodyConNav/> }/>
 <Route path='/productos' element={<BodyConNav/> }/>
 <Route path='/productos/:categoriaId' element={<BodyConNav/> }/>
@@ -29,6 +31,7 @@ console.log("CartContext",CartContext)
 <Route path= "/cart" element= {<Cart/>} />
 
 </Routes>
+{/* <Footer/> */}
 </CartProvider>
 {/* <Footer/> */}
 
