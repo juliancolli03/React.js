@@ -7,6 +7,10 @@ width: auto;
 .responsive{
   width: auto;
 }
+.fotos{
+  width: 200px;
+  height: 250px
+}
 footer{
   background: #f9f9f9
 }

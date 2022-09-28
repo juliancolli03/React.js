@@ -5,6 +5,7 @@ import './index.css';
 import ItemDetailContainer from './componentes/itemdetailconteiner';
 import BodyConNav from './componentes/itemlistcontainer';
 import Cart from './componentes/cart';
+import Checkout from './componentes/Checkout';
 import CartProvider from './CartContext';
  import Footer from './componentes/footer';
  export const CartContext = React.createContext("")
@@ -29,6 +30,7 @@ console.log("CartContext",CartContext)
 <Route path='/productos/:categoriaId' element={<BodyConNav/> }/>
 <Route path='/detalle/:id' element={  <ItemDetailContainer/> }/>
 <Route path= "/cart" element= {<Cart/>} />
+<Route path="/chekout" element={<Checkout />} />
 
 </Routes>
 {/* <Footer/> */}

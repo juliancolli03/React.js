@@ -30,12 +30,12 @@ const NavBar = () =>{
                 </li>
                 <li className="nav-item">
                     <NavLink to={'/productos/celular'} className="nav-link align-middle px-0">
-                    <i class="fa-solid fa-mobile-retro"></i> <span className="ms-1 d-none d-sm-inline"> Celulares</span>
+                    <i className="fa-solid fa-mobile-retro"></i> <span className="ms-1 d-none d-sm-inline"> Celulares</span>
                     </NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to={'/productos/play'} className="nav-link align-middle px-0">
-                    <i class="fa-solid fa-thin fa-tv"></i><span className="ms-1 d-none d-sm-inline"> Otros</span>
+                    <NavLink to={'/productos/otros'} className="nav-link align-middle px-0">
+                    <i className="fa-solid fa-thin fa-tv"></i><span className="ms-1 d-none d-sm-inline"> Otros</span>
                     </NavLink>
                 </li>
                 {/* <li className="nav-item">

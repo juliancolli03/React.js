@@ -12,13 +12,13 @@ const Tarjeta = ({info}) =>{
     //   }
     return(
     <div className="navegacion">
-  <div class="col-12 col-md-6">
-      <div class="card shadow">
-          <img src={info.foto} class="card-img-top rounded-top"/>
-          <div class="card-body">
-              <h3 class="h5 card-title mt-3">{info.titulo}</h3>
-              <p class="card-text">{info.descripcion}</p>
-              <p class="card-text">$ {info.precio}</p>
+  <div className="col-12 col-md-6">
+      <div className="card shadow">
+          <img src={info.foto} className="card-img-top rounded-top"/>
+          <div className="card-body">
+              <h3 className="h5 card-title mt-3">{info.titulo}</h3>
+              <p className="card-text">{info.descripcion}</p>
+              <p className="card-text">$ {info.precio}</p>
               <Link to={`/detalle/${info.id}`} className="btn btn-primary"> Ver mas</Link>
                             {/* <ItemCount2 stock={info.stock}  onAdd={onAdd}  /> */}
           </div>
