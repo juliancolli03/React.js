@@ -9,16 +9,16 @@ import { db } from '../firebase/firebase';
 const Form = ({ handleId }) => {
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
-    const { totalPrecio, cart } = useContext(useCartContext);
-    const total = totalPrecio();
+    //  const { totalPrecio, cart } = useContext(useCartContext);      
+    // const total = totalPrecio();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const orden = {
             buyer: { nombre, telefono },
             date: serverTimestamp(),
-            cart,
-            total,
+            // cart,
+            // total,
         };
         const refOrden = collection(db, 'orders');
         addDoc(refOrden, orden).then((res) => {
@@ -31,13 +31,14 @@ const Form = ({ handleId }) => {
     const handleTelefono = (e) => setTelefono(e.target.value);
 
     return (
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" 
+        onSubmit={handleSubmit}>
             <input
                 type="text"
                 name="nombre"
                 placeholder="Nombre Completo"
                 value={nombre}
-                onChange={handleNombre}
+             onChange={handleNombre}
                 required
             />
             <input

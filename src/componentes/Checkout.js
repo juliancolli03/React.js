@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import Form from './formulario';
+ import Form from './formulario';
 
 const Checkout = () => {
     const [orderId, setOrderId] = useState('');

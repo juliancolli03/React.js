@@ -6,6 +6,18 @@ width: auto;
 }
 .responsive{
   width: auto;
+  margin-top: 26px;
+
+margin-left: 20px;
+}
+.itemCart{
+  width: 250px;
+display: flex;
+margin: 80px;
+}
+.card-body{
+  border-top: gray 1px solid;
+
 }
 .fotos{
   width: 200px;

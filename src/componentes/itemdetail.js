@@ -28,8 +28,13 @@ const ItemDetail = ({ item }) => {
                 </p>
                 <h3>${item.precio}</h3>
                 {goToCart ?
-                <div> 
+                <div>
                     <Link className='' to='/cart'>Terminar compra</Link><br />
+                    
+                    <br />
+                    
+                    
+
                   <Link className='' to='/'>Seguir comprando</Link>
                 </div>                :<ItemCount2 stock={item.stock}  onAdd={onAdd}  />
                 // <Link to="/cart"> terminar</Link>
