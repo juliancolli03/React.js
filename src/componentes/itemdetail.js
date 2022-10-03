@@ -21,13 +21,13 @@ const ItemDetail = ({ item }) => {
         <div className='superetalle'>
          <div className='bodyDetalle col-md-4'>
         
-        <div className="d-flex">
-            <img src={item.foto} className="col-md-8" />
+        <div className="flesbos">
+            <img src={item.foto} className="imagenes col-md-8" />
             <br></br>
             <hr></hr>
             <div className="col-md-12 ol">
                 <h2>{item.titulo}</h2>
-                <p>
+                <p className='lead parafo'>
                     {item.descripcion}
                 </p>
                 <h3>${item.precio}</h3>

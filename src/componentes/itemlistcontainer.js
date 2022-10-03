@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ItemCounts from "./item"
 import { useParams } from "react-router-dom";
-import { getFirestore, collection, getDocs, getDoc, query, where } from 'firebase/firestore';
+import { getFirestore, collection, getDocs,  query, where } from 'firebase/firestore';
 
 
 const Bodyy = ({texto}) => {

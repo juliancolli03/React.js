@@ -8,7 +8,6 @@ import Cart from './componentes/cart';
 import Checkout from './componentes/Checkout';
 import CartProvider from './CartContext';
  export const CartContext = React.createContext("")
-console.log("CartContext",CartContext)
 
  function App() {
   return(

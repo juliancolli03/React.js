@@ -20,8 +20,9 @@ margin-left: 20px;
 .ol{
   margin: 17px;
 }
-.bodyDetalle{
-  
+.imagenes{
+  width: 250px;
+  height: 250px;
 }
 .comprar{
   text-decoration: none;
@@ -56,6 +57,7 @@ grid-template-columns: 1fr 1fr;
 footer{
   background: #f9f9f9
 }
+
 .margen{
   border-top: gray 1px solid;
 }
@@ -65,6 +67,9 @@ footer{
   margin: 15px;
   padding-top: 100px;
   position: fixed;
+}
+.flesbos{
+  display: flex;
 }
 .detail{
   width: 250px;
@@ -104,6 +109,9 @@ margin: 30px;
   height: 250px;
 }
 @media (max-width:500px){
+  .responsive{
+    width: 200px;
+  }
   .botom{
       border-bottom: none;
   }
@@ -122,10 +130,16 @@ margin: 30px;
   .itemCart {
     width: 250px;
     display: grid;
-    margin: 45px;
+    margin: 30px;
+  }
+  .flesbos{
+    display: grid !important;
   }
   form{
     width: 250px;
     margin-top: 20px;
+  }
+  .parafo{
+    font-size: 17px;
   }
   }

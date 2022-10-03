@@ -1,6 +1,4 @@
 import React from 'react'
-// import { addDoc, collection, getFirestore } from "firebase/firestore";
-// import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from "../CartContext";
 import ItemCart from './itemcart';
@@ -10,8 +8,8 @@ const Cart = () => {
    if (cart.length === 0) {
      return(
        <div className='carrot'>
-         <p>No hay elementos en el carrito</p>
-         <Link className='' to='/'>Hacer compras</Link>
+         <p>No hay elementos en el carrito </p>
+         <Link className='' to='/'> Hacer compras</Link>
        </div>
      )
    }
