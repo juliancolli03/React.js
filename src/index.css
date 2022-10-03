@@ -4,11 +4,34 @@ body {
 
 width: auto;
 }
+form{
+  width: 500px;
+  margin:20px
+}
 .responsive{
-  width: auto;
+  /* width: auto;
   margin-top: 26px;
 
+margin-left: 20px; */
+width: 1000px;
+margin-top: 40px;
 margin-left: 20px;
+}
+.ol{
+  margin: 17px;
+}
+.bodyDetalle{
+  
+}
+.comprar{
+  text-decoration: none;
+color: black;
+background: #e3e32d;
+}
+.welcome{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-bottom: 17px;
 }
 .itemCart{
   width: 250px;
@@ -18,6 +41,13 @@ margin: 80px;
 .card-body{
   border-top: gray 1px solid;
 
+}
+.Itemsss{
+  display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.carrot{
+  display: contents;
 }
 .fotos{
   width: 200px;
@@ -83,7 +113,19 @@ margin: 30px;
   .Items{
     grid-template-columns:none
   }
+  .Itemsss{
+    grid-template-columns: none;
+  }
   footer{
     width: 288px;
   }
-}
+  .itemCart {
+    width: 250px;
+    display: grid;
+    margin: 45px;
+  }
+  form{
+    width: 250px;
+    margin-top: 20px;
+  }
+  }

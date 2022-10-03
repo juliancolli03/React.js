@@ -1,7 +1,6 @@
 
 
 import React from 'react';
-// import { useCartContext } from '../CartContext';
 import { useCartContext } from '../CartContext';
 import ItemCount2 from "./itemcount2";
 import { useState } from 'react';
@@ -19,9 +18,14 @@ const ItemDetail = ({ item }) => {
     const {addProduct} = useCartContext()
 
     return (
-        <div className="detail card">
-            <img src={item.foto} className="card-img-top rounded-top" />
-            <div className="infoDetail">
+        <div className='superetalle'>
+         <div className='bodyDetalle col-md-4'>
+        
+        <div className="d-flex">
+            <img src={item.foto} className="col-md-8" />
+            <br></br>
+            <hr></hr>
+            <div className="col-md-12 ol">
                 <h2>{item.titulo}</h2>
                 <p>
                     {item.descripcion}
@@ -29,22 +33,21 @@ const ItemDetail = ({ item }) => {
                 <h3>${item.precio}</h3>
                 {goToCart ?
                 <div>
-                    <Link className='' to='/cart'>Terminar compra</Link><br />
+                    <Link className='btn comprar' to='/cart'>Terminar compra</Link><br />
                     
                     <br />
                     
                     
 
-                  <Link className='' to='/'>Seguir comprando</Link>
+                  <Link className='btn btn-primary ' to='/'>Seguir comprando</Link>
                 </div>                :<ItemCount2 stock={item.stock}  onAdd={onAdd}  />
-                // <Link to="/cart"> terminar</Link>
-           
-                    
-                }
-                {/* <ItemCount2 stock={item.stock}  onAdd={onAdd}  /> */}
+}
             </div>
         </div>
-        // </Link>
+        
+        
+        </div>
+        </div>
     );
 };
 

@@ -7,7 +7,6 @@ import BodyConNav from './componentes/itemlistcontainer';
 import Cart from './componentes/cart';
 import Checkout from './componentes/Checkout';
 import CartProvider from './CartContext';
- import Footer from './componentes/footer';
  export const CartContext = React.createContext("")
 console.log("CartContext",CartContext)
 

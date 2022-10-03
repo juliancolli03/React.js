@@ -38,11 +38,7 @@ const NavBar = () =>{
                     <i className="fa-solid fa-thin fa-tv"></i><span className="ms-1 d-none d-sm-inline"> Otros</span>
                     </NavLink>
                 </li>
-                {/* <li className="nav-item">
-                <a href="#" className="nav-link align-middle px-0">
-                    <i className="fa-solid fa-user-check"></i> <span className="ms-1 d-none d-sm-inline">Usuario</span>
-                </a>
-            </li> */}
+                
        
        </ul>
                 </div>

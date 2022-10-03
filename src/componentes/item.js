@@ -1,6 +1,5 @@
 import React from "react";
 import Tarjetass from "./itemlist"
-import ItemDetailContainer from "./itemdetailconteiner";
 
 
 const ItemList = ({data =[]}) =>{
