@@ -31,18 +31,13 @@ import CartProvider from './CartContext';
 <Route path="/chekout" element={<Checkout />} />
 
 </Routes>
-{/* <Footer/> */}
 </CartProvider>
-{/* <Footer/> */}
 
   </div>
-  {/* <Footer/> */}
 
   </div>
-  {/* <Footer/> */}
 
   </div>
-  {/* <Footer/> */}
   </>
   )
  }
